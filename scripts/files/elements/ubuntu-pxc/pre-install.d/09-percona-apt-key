@@ -24,4 +24,4 @@ deb-src http://repo.percona.com/apt $RELEASE main
 EOL
 
 # force an update
-apt-get update
+sudo apt-key update && sudo apt-get update
