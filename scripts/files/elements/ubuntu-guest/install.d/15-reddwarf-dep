@@ -19,4 +19,8 @@ apt-get -y install python-dev libxml2-dev libxslt1-dev python-setuptools \
 
 TMP_HOOKS_DIR="/tmp/in_target.d"
 
+mkdir ~/.pip
+echo "[global]" >> ~/.pip/pip.conf
+echo "index-url=http://pypi.douban.com/simple" >>~/.pip/pip.conf
+
 pip install -q --upgrade -r ${TMP_HOOKS_DIR}/requirements.txt
